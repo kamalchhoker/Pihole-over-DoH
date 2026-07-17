@@ -28,11 +28,12 @@ This method uses a local service to act as a reverse proxy, accepting plain text
 
 This method configures the Cloudflare Tunnel client on your Raspberry Pi to handle secure DNS queries.
 
-1. **Install and run the script:** Deploy the `cloudflared` service on your hardware.
+1. **Install and run the script:** (https://github.com/deeprooter/DNS-over-DoH/blob/main/piholeoverDoH.sh).
 2. **Configure Pi-hole Upstream DNS:** In the Pi-hole GUI, disable default providers and add your local proxy under **Custom 1 (IPv4)**:
    ```text
    127.0.0.1#5053
    ```
+   (https://github.com/deeprooter/DNS-over-DoH/blob/main/DoH.png)
 3. **Restart the DNS service:** Apply changes by running:
    ```bash
    sudo systemctl restart pihole-FTL
